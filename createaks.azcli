@@ -17,3 +17,6 @@ az group create --resource-group $AKS_RES_NAME --location japaneast
 
 #Create AKS
 az aks create --name $AKS_CLUSTER_NAME --resource-group $AKS_RES_NAME --node-count 3 --kubernetes-version 1.12.8 --node-vm-size Standard_DS1_v2 --generate-ssh-keys --service-principal $APP_ID --client-secret $SP_PASSWD
+
+#Get Credential
+az aks get-credentials --resource-group $AKS_RES_NAME --name $AKS_CLUSTER_NAME
