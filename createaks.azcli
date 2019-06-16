@@ -1,0 +1,14 @@
+#ACRのID取得（AKSのサービスプリンシパルに登録するための情報）
+$ACR_ID = $(az acr show --name $ACR_NAME --query id --output tsv)
+$SP_NAME = "sample-acr-service-principal-okzk"
+$SP_PASSWD=$(az ad sp create-for-rbac --name $SP_NAME --role Reader --scopes $ACR_ID --query password --output tsv)
+$APP_ID = $(az ad sp show --id http://$SP_NAME --query appId --output tsv)
+
+#格納シークレット情報の確認
+echo $SP_PASSWD
+echo $APP_ID
+
+#AKS Name
+$AKS_CLUSTER_NAME="AKSCluster-okzk"
+$AKS_RES_NAME=$AKS_CLUSTER_NAME
+

@@ -1,0 +1,8 @@
+#真壁さんのサンプルイメージをACRに登録する
+git clone https://github.com/ToruMakabe/understanding-K8s
+az acr build --registry $ACR_NAME --image photo-view:v1.0 v1.0/
+az acr build --registry $ACR_NAME --image photo-view:v2.0 v2.0/
+
+#acrに登録されたイメージの確認
+az acr repository show-tags -n $ACR_NAME --repository photo-view
+
