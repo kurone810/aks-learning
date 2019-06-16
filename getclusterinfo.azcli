@@ -1,0 +1,11 @@
+#Cluster-info
+kubectl cluster-info
+
+#node-info -o=wide
+kubectl get node -o=wide
+
+#describe
+kubectl describe node aks-nodepool1-32299400-0
+
+#jsonpath sample
+kubectl get node -o=jsonpath='{.items[0].metadata.name}'
