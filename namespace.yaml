@@ -1,4 +1,4 @@
 apiVersion: v1
-kind: Namespace
+kind: Project
 metadata:
-  name: photoview-staging
+  name: repotest-infra
