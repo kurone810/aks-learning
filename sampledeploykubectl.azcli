@@ -1,0 +1,11 @@
+#SampleDeploy
+kubectl apply -f tutorial-deployment.yaml
+kubectl apply -f tutorial-service.yaml 
+
+#Pod Status
+kubectl get pod 
+kubectl get svc -w
+
+#SampleDelete
+kubectl delete -f tutorial-service.yaml 
+kubectl delete -f tutorial-deployment.yaml

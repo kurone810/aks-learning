@@ -1,0 +1,2 @@
+#namesapceを変更するコマンド
+kubectl config set-context my-context --namespace=trade-system
