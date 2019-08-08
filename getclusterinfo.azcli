@@ -9,3 +9,6 @@ kubectl describe node aks-nodepool1-32299400-0
 
 #jsonpath sample
 kubectl get node -o=jsonpath='{.items[0].metadata.name}'
+
+# get-aks Secret 
+az aks get-credentials --resource-group AKSCluster-okzk --name AKSCluster-okzk
